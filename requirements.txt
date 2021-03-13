@@ -1,0 +1,5 @@
+opencv_python==4.5.1.48
+pandas==1.2.2
+streamlit==0.76.0
+numpy==1.19.5
+Pillow==8.1.2

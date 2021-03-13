@@ -71,7 +71,8 @@ def lightpre(img):
   mask = mask_generate(img,low_black,high_black)
   m,contours = ccontours(mask)
   threshold = img_thresh(contours)
-  return threshold
+  result = cv2.resize(threshold,(224,224), interpolation = cv2.INTER_AREA)
+  return result
 
 def darkpre(img):
   gray_img = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
@@ -84,7 +85,8 @@ def darkpre(img):
   gray_img = cv2.bitwise_not(dilate)
   res = cv2.cvtColor(gray_img,cv2.COLOR_GRAY2RGB)
   m,contours = ccontours(res)
-  return contours
+  result = cv2.resize(contours,(224,224), interpolation = cv2.INTER_AREA)
+  return result
 
 def main():
 	st.title("Test Input")

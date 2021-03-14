@@ -133,12 +133,12 @@ def main():
 				res = lightpre(img)
 				st.write("light")
 				st.write(res.shape)
-				st.image(res,width=st.screen.width,height=244)
+				st.image(res,use_column_width=True)
 			if status == "dark" :
 				res = darkpre(img)
 				st.write("dark")
 				st.write(res.shape)
-				st.image(res,width=st.screen.width,height=244)
+				st.image(res,use_column_width=True)
 
 		if st.button("Done"):
 			st.write( "[" + str(result_first) + " , "+ str(result_second) +" , " + str(result_third) + "]")

@@ -142,7 +142,7 @@ def main():
 
 		if st.button("Done"):
 			st.write( "[" + str(result_first) + " , "+ str(result_second) +" , " + str(result_third) + "]")
-			st.write("The result is Essential Tremor")			
+			st.write("The result is ...")			
 	else:
 		st.subheader("About")
 		st.info("Built with Streamlit")
